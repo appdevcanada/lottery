@@ -26,6 +26,7 @@ button,
 input {
     font-family: Ubuntu, Helvetica, Arial, sans-serif;
     padding: 0.4rem;
+    margin-top: 10px;
 }
 
 #home {
@@ -73,9 +74,9 @@ li {
 *************************************************/
 header {
     padding: 1rem 2rem;
-    border-top: 1rem solid hsl(44, 78%, 56%);
     background-image: url("/img/HDBG.png");
     background-size: contain;
+    border-top: 1rem solid hsl(142, 70%, 30%);
 }
 
 header > h1 {
@@ -103,7 +104,7 @@ button {
     color: hsl(1, 0%, 100%);
     background-color: hsl(1, 0%, 70%);
     font-size: 1.1rem;
-    border: 5px solid hsl(142, 70%, 40);
+    border: 5px solid hsl(142, 70%, 40%);
     border-radius: 15px;
     border-width: medium;
     -webkit-transition-duration: 0.5s;
@@ -111,7 +112,7 @@ button {
 }
 
 button:hover {
-    background-color: hsl(44, 78%, 56%);
+    background-color: hsl(142, 70%, 30%);
 }
 
 #max,
@@ -138,148 +139,25 @@ footer {
             MEDIA QUERIES for layout
 *************************************************/
 @media (max-width: 599px) {
-    header {
-        border-top: 1rem solid hsl(142, 70%, 30%);
-    }
-
-    .primary {
-        flex-wrap: wrap;
-        border-bottom: 1rem solid hsl(142, 70%, 30%);
-    }
-
-    .segment {
-        width: 100%;
-    }
-
-    .foot {
-        flex-direction: column;
-    }
-
-    .subnav {
-        order: 2;
-    }
-
-    .comments {
-        order: 1;
-        width: 100%;
-    }
-
-    button:hover {
-        background-color: hsl(142, 70%, 30%);
-    }
 
     button {
-        border: 5px solid hsl(142, 70%, 30%);
+        
     }
 
-    #comment,
-    #city {
-        width: 99%;
-    }
-
-    #name,
-    #email {
-        width: 49%;
-    }
 }
 
 @media (min-width: 600px) and (max-width:999px) {
 
-    header {
-        border-top: 1rem solid hsl(202, 70%, 50%);
-    }
-
-    nav > a:active,
-    nav > a:focus,
-    nav > a:hover,
-    .subnav a:active,
-    .subnav a:focus,
-    .subnav a:hover {
-        border-bottom: 3px solid hsl(202, 70%, 50%);
-    }
-
-    .primary {
-        flex-wrap: wrap;
-        border-bottom: 1rem solid hsl(202, 70%, 50%);
-    }
-
-    .segment {
-        width: 100%;
-    }
-
-    .segment img {
-        width: 25%;
-    }
-
-    .minor-segment {
-        width: 50%;
-    }
-
-    .foot {
-        flex-direction: column;
-    }
-
-    .subnav {
-        order: 2;
-    }
-
-    .comments {
-        order: 1;
-        width: 100%;
-    }
-
-    button:hover {
-        background-color: hsl(202, 70%, 50%);
-    }
-
     button {
-        border: 5px solid hsl(202, 70%, 50%);
+
     }
 
-    #comment,
-    #city {
-        width: 99%;
-    }
-
-    #name,
-    #email {
-        width: 49%;
-    }
 }
 
 @media (min-width: 1000px) {
 
-    header {
-        border-top: 1rem solid hsl(44, 70%, 50%);
-    }
-
-    nav > a:active,
-    nav > a:focus,
-    nav > a:hover,
-    .subnav a:active,
-    .subnav a:focus,
-    .subnav a:hover {
-        border-bottom: 3px solid hsl(44, 70%, 50%);
-    }
-
-    .primary {
-        flex-wrap: nowrap;
-        border-bottom: 1rem solid hsl(44, 70%, 50%);
-    }
-
-    .segment {
-        width: 33%;
-    }
-
-    button > hover {
-        background-color: hsl(44, 78%, 56%);
-    }
-
     button {
-        border: 5px solid hsl(44, 78%, 56%);
+
     }
 
-    .comments {
-        width: 100%;
-    }
 }

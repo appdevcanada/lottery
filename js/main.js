@@ -8,7 +8,7 @@ function init() {
 
 function getData() {
 
-    let mainURL = "http://davidst.edumedia.ca/mad9014/nums.php";
+    let mainURL = "http://davidst.edumedia.ca/mad9014/nums.php?";
     let allData = new FormData();
 
     let initDigits = document.getElementById("digits").value;
@@ -18,8 +18,12 @@ function getData() {
         if (Number(maxNumber) >= Number(initDigits)) {
             document.getElementById("home").style.display = "none";
             document.getElementById("list").style.display = "block";
-
-            fetch(mainURL + "?digits=" + initDigits + "&max=" + maxNumber)
+            let paramVars = "digits=" + initDigits + "&max=" + maxNumber
+            let opts = {
+                method: 'POST',
+                mode: 'cors'
+            };
+            fetch(mainURL + paramVars, opts)
                 .then(function (response) {
                     return response.json();
                 })
