@@ -37,7 +37,7 @@ input {
 }
 
 .mainList2 {
-    width: 50%;
+    width: 60%;
 }
 
 #numbers {
@@ -62,9 +62,10 @@ li {
     list-style: none;
     background-image: url("/img/ball.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 50px;
+    background-position: center;
     font-weight: bolder;
-    padding: 0.8rem 1rem 3rem 1rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
 }
 
 /*************************************************
