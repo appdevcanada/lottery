@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/*************************************************
+            DEFAULTS
+*************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: center;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+button,
+input {
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    padding: 0.4rem;
+}
+
+#home {
+    display: block;
+}
+
+#list {
+    display: none;
+}
+
+.mainList2 {
+    width: 50%;
+}
+
+#numbers {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    background-image: url("/img/ball.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: bolder;
+    padding: 0.8rem 1rem 3rem 1rem;
+}
+
+/*************************************************
+            HEADER
+*************************************************/
+header {
+    padding: 1rem 2rem;
+    border-top: 1rem solid hsl(44, 78%, 56%);
+    background-image: url("/img/HDBG.png");
+    background-size: contain;
+}
+
+header > h1 {
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 2px hsl(1, 0%, 20%);
+    color: hsl(142, 70%, 40%);
+    background-color: hsl(1, 0%, 100%));
+}
+
+
+/*************************************************
+            MAIN CONTENT
+*************************************************/
+.num_list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+section > p {
+    padding: 0 0 1rem 0;
+}
+
+button {
+    color: hsl(1, 0%, 100%);
+    background-color: hsl(1, 0%, 70%);
+    font-size: 1.1rem;
+    border: 5px solid hsl(142, 70%, 40);
+    border-radius: 15px;
+    border-width: medium;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 1s;
+}
+
+button:hover {
+    background-color: hsl(44, 78%, 56%);
+}
+
+#max,
+#digits {
+    font-size: 1rem;
+    color: hsl(1, 0%, 30%);
+    box-shadow: 2px 2px 3px 0 hsl(1, 0%, 30%);
+}
+
+
+
+/*************************************************
+            FOOTER
+*************************************************/
+footer {
+    background-image: linear-gradient(hsl(1, 0%, 60%), hsl(1, 0%, 95%), hsl(1, 0%, 60%));
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+/*************************************************
+            MEDIA QUERIES for layout
+*************************************************/
+@media (max-width: 599px) {
+    header {
+        border-top: 1rem solid hsl(142, 70%, 30%);
+    }
+
+    .primary {
+        flex-wrap: wrap;
+        border-bottom: 1rem solid hsl(142, 70%, 30%);
+    }
+
+    .segment {
+        width: 100%;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+
+    .subnav {
+        order: 2;
+    }
+
+    .comments {
+        order: 1;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: hsl(142, 70%, 30%);
+    }
+
+    button {
+        border: 5px solid hsl(142, 70%, 30%);
+    }
+
+    #comment,
+    #city {
+        width: 99%;
+    }
+
+    #name,
+    #email {
+        width: 49%;
+    }
+}
+
+@media (min-width: 600px) and (max-width:999px) {
+
+    header {
+        border-top: 1rem solid hsl(202, 70%, 50%);
+    }
+
+    nav > a:active,
+    nav > a:focus,
+    nav > a:hover,
+    .subnav a:active,
+    .subnav a:focus,
+    .subnav a:hover {
+        border-bottom: 3px solid hsl(202, 70%, 50%);
+    }
+
+    .primary {
+        flex-wrap: wrap;
+        border-bottom: 1rem solid hsl(202, 70%, 50%);
+    }
+
+    .segment {
+        width: 100%;
+    }
+
+    .segment img {
+        width: 25%;
+    }
+
+    .minor-segment {
+        width: 50%;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+
+    .subnav {
+        order: 2;
+    }
+
+    .comments {
+        order: 1;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: hsl(202, 70%, 50%);
+    }
+
+    button {
+        border: 5px solid hsl(202, 70%, 50%);
+    }
+
+    #comment,
+    #city {
+        width: 99%;
+    }
+
+    #name,
+    #email {
+        width: 49%;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    header {
+        border-top: 1rem solid hsl(44, 70%, 50%);
+    }
+
+    nav > a:active,
+    nav > a:focus,
+    nav > a:hover,
+    .subnav a:active,
+    .subnav a:focus,
+    .subnav a:hover {
+        border-bottom: 3px solid hsl(44, 70%, 50%);
+    }
+
+    .primary {
+        flex-wrap: nowrap;
+        border-bottom: 1rem solid hsl(44, 70%, 50%);
+    }
+
+    .segment {
+        width: 33%;
+    }
+
+    button > hover {
+        background-color: hsl(44, 78%, 56%);
+    }
+
+    button {
+        border: 5px solid hsl(44, 78%, 56%);
+    }
+
+    .comments {
+        width: 100%;
+    }
+}
