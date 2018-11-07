@@ -11,6 +11,19 @@
     text-align: center;
 }
 
+:root {
+    --bd-top: 1rem solid hsl(142, 70%, 40%);
+    --b-bdr: 1px solid hsl(142, 70%, 40%);
+    --h-txt-sdw: 2px 2px 2px hsl(1, 0%, 20%);
+    --h-clr: hsl(142, 70%, 40%);
+    --h-bg-clr: hsl(1, 0%, 90%);
+    --b-bg-clr: hsl(1, 0%, 50%);
+    --b-h-bg-clr: hsl(142, 70%, 30%);
+    --b-h-box-sdw: 0 0 10px hsl(206, 69%, 47%);
+    --i-clr: hsl(1, 0%, 30%);
+    --i-box-sdw: 2px 2px 3px 1px hsl(1, 0%, 50%);
+}
+
 *::after,
 *::before {
     box-sizing: inherit;
@@ -80,14 +93,14 @@ header {
     padding: 1rem 2rem;
     background-image: url("/img/HDBG.png");
     background-size: contain;
-    border-top: 1rem solid hsl(142, 70%, 30%);
+    border-top: var(--bd-top);
 }
 
-header > h1 {
+header > h1 > span {
     font-size: 2.8rem;
-    text-shadow: 2px 2px 2px hsl(1, 0%, 20%);
-    color: hsl(142, 70%, 40%);
-    background-color: hsl(1, 0%, 100%));
+    text-shadow: var(--h-txt-sdw);
+    color: var(--h-clr);
+    background-color: var(--h-bg-clr);
 }
 
 
@@ -105,25 +118,26 @@ section > p {
 }
 
 button {
-    color: hsl(1, 0%, 100%);
-    background-color: hsl(1, 0%, 70%);
+    color: var(--h-bg-clr);
+    background-color: var(--b-bg-clr);
     font-size: 1.1rem;
-    border: 5px solid hsl(142, 70%, 40%);
-    border-radius: 15px;
-    border-width: medium;
+    border: var(--b-bdr);
+    border-radius: 2px;
     -webkit-transition-duration: 1s;
     transition-duration: 1s;
 }
 
 button:hover {
-    background-color: hsl(142, 70%, 30%);
+    background-color: var(--b-h-bg-clr);
+    box-shadow: var(--b-h-box-sdw);
+    cursor: pointer;
 }
 
 #max,
 #digits {
     font-size: 1rem;
-    color: hsl(1, 0%, 30%);
-    box-shadow: 2px 2px 3px 1px hsl(1, 0%, 50%);
+    color: var(--i-clr);
+    box-shadow: var(--i-box-sdw);
 }
 
 .results,
@@ -149,7 +163,7 @@ footer {
 *************************************************/
 @media (max-width: 599px) {
 
-    header > h1 {
+    header > h1 > span {
         font-size: 2.8rem;
     }
 
@@ -172,7 +186,7 @@ footer {
 
 @media (min-width: 600px) and (max-width:999px) {
 
-    header > h1 {
+    header > h1 > span {
         font-size: 3rem;
     }
 
@@ -196,7 +210,7 @@ footer {
 
 @media (min-width: 1000px) {
 
-    header > h1 {
+    header > h1 > span {
         font-size: 3.2rem;
     }
 
