@@ -8,7 +8,7 @@ function init() {
 
 function getData() {
 
-    let mainURL = "http://davidst.edumedia.ca/mad9014/nums.php?";
+    let mainURL = "https://davidst.edumedia.ca/mad9014/nums.php?";
     let allData = new FormData();
 
     let initDigits = document.getElementById("digits").value;
